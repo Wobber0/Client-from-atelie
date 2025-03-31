@@ -21,9 +21,20 @@ namespace Test_Client
         {
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(clientWin_FormClosing);
+            spravka.Hide();
+            ShowInGrid($@"select
+                                    s.name AS `Услуга`,
+                                    o.comment as `Комментарий`,
+                                    o.create_date as `Дата создания`,
+                                    o.status as `Статус`, 
+                                    o.cost as `Стоимость` 
+                                from `order` o
+                                inner join 
+                                    `service` s ON o.service_id = s.id
+                                where client_id = {usersID.Value}; ");
         }
 
-        void ShowClienttInGrid(string query)
+        void ShowInGrid(string query)
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
@@ -36,9 +47,22 @@ namespace Test_Client
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            authorization AUTH = new authorization();
-            AUTH.Show();
-            this.Hide();
+            // Создаем форму подтверждения
+            confexitWin confirmForm = new confexitWin();
+            DialogResult result = confirmForm.ShowDialog();
+
+            if (result == DialogResult.Yes)
+            {
+                // Закрываем текущую форму и открываем авторизацию
+                this.Hide();
+                authorizationWin authForm = new authorizationWin();
+                authForm.Show();
+            }
+            else
+            {
+                // Просто закрываем диалог, основная форма остается
+                confirmForm.Close();
+            }
         }
 
         private void clientWin_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,11 +72,12 @@ namespace Test_Client
 
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            spravka.Hide();
             if (dataGridView1.Width == 446)
             {
                 dataGridView1.Width = 756;
             }
-            ShowClienttInGrid($@"select
+            ShowInGrid($@"select
                                     s.name AS `Услуга`,
                                     o.comment as `Комментарий`,
                                     o.create_date as `Дата создания`,
@@ -66,11 +91,12 @@ namespace Test_Client
 
         private void отччетToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            spravka.Hide();
             if (dataGridView1.Width == 446)
             {
                 dataGridView1.Width = 756;
             }
-            ShowClienttInGrid($@"select
+            ShowInGrid($@"select
 	                                p.date as `Дата создания`,
 	                                p.amount as `Стоимость`,
 	                                s.name as `Тип заказа`,
@@ -83,11 +109,12 @@ namespace Test_Client
 
         private void нашиУслугиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            spravka.Hide();
             if ( dataGridView1.Width == 446)
             {
                 dataGridView1.Width = 756;
             }
-            ShowClienttInGrid(@"select
+            ShowInGrid(@"select
 	                                id as 'Номер',
 	                                name as 'Название',
 	                                base_price as 'Базовая цена',
@@ -97,11 +124,12 @@ namespace Test_Client
 
         private void платежиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            spravka.Show();
             if (dataGridView1.Width == 756)
             {
                 dataGridView1.Width = 446;
             }
-            ShowClienttInGrid(@"select
+            ShowInGrid(@"select
 	                                id as 'Номер',
 	                                name as 'Название',
 	                                base_price as 'Базовая цена',
@@ -111,7 +139,7 @@ namespace Test_Client
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            if (e.RowIndex >= 0 && e.ColumnIndex == 1)
             {
                 var cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 string value = cell.Value?.ToString() ?? "Пусто";
@@ -146,6 +174,11 @@ namespace Test_Client
             {
                 MessageBox.Show(ex.ToString(), "Не получилось добавить нового пользователя!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void clientWin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

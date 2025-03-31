@@ -12,7 +12,7 @@ using Test_Client;
 //форма рабочая
 namespace Test
 {
-    public partial class authorization : Form
+    public partial class authorizationWin : Form
     {
         // строка подключения к БД
         string connStr = "server=localhost;user=root;database=atelie;password=root;";
@@ -23,7 +23,7 @@ namespace Test
         bool schet = true;
 
 
-        public authorization()
+        public authorizationWin()
         {
             InitializeComponent();
             //закрытие других форм просле закрытия этой
@@ -121,6 +121,8 @@ namespace Test
             reader.Close(); // закрываем reader
             // закрываем соединение с БД
             conn.Close();
+            loginBox.Clear();
+            passwordBox.Clear();
         }
 
         //переключение enter'ом между полями ввода и кнопкой входа
@@ -150,6 +152,11 @@ namespace Test
             {
                 passwordBox.UseSystemPasswordChar = true;
             }
+        }
+
+        private void authorizationWin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

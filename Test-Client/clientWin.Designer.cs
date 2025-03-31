@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clientWin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.бДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заказыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.платежиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отччетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.моиДанныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сменитьПарольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.нашиУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sidBox = new System.Windows.Forms.TextBox();
@@ -45,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.create = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.spravka = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,7 +56,6 @@
             this.выходToolStripMenuItem,
             this.бДToolStripMenuItem,
             this.отччетToolStripMenuItem,
-            this.статистикаToolStripMenuItem,
             this.нашиУслугиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -107,29 +105,6 @@
             this.отччетToolStripMenuItem.Text = "Мои платежи";
             this.отччетToolStripMenuItem.Click += new System.EventHandler(this.отччетToolStripMenuItem_Click);
             // 
-            // статистикаToolStripMenuItem
-            // 
-            this.статистикаToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.статистикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.моиДанныеToolStripMenuItem,
-            this.сменитьПарольToolStripMenuItem});
-            this.статистикаToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
-            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(122, 28);
-            this.статистикаToolStripMenuItem.Text = "Профиль";
-            // 
-            // моиДанныеToolStripMenuItem
-            // 
-            this.моиДанныеToolStripMenuItem.Name = "моиДанныеToolStripMenuItem";
-            this.моиДанныеToolStripMenuItem.Size = new System.Drawing.Size(256, 28);
-            this.моиДанныеToolStripMenuItem.Text = "Мои данные";
-            // 
-            // сменитьПарольToolStripMenuItem
-            // 
-            this.сменитьПарольToolStripMenuItem.Name = "сменитьПарольToolStripMenuItem";
-            this.сменитьПарольToolStripMenuItem.Size = new System.Drawing.Size(256, 28);
-            this.сменитьПарольToolStripMenuItem.Text = "Сменить пароль";
-            // 
             // нашиУслугиToolStripMenuItem
             // 
             this.нашиУслугиToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -143,7 +118,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 108);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -212,23 +187,36 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.commBox);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(489, 80);
+            this.panel1.Location = new System.Drawing.Point(489, 108);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(290, 379);
             this.panel1.TabIndex = 8;
+            // 
+            // spravka
+            // 
+            this.spravka.AutoSize = true;
+            this.spravka.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.spravka.Location = new System.Drawing.Point(19, 72);
+            this.spravka.Name = "spravka";
+            this.spravka.Size = new System.Drawing.Size(483, 22);
+            this.spravka.TabIndex = 9;
+            this.spravka.Text = "Из предложенных вариантов выберете тип заказа";
             // 
             // clientWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 491);
+            this.ClientSize = new System.Drawing.Size(800, 518);
+            this.Controls.Add(this.spravka);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "clientWin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "clientWin";
+            this.Text = "Ashy Horizon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.clientWin_FormClosing);
+            this.Load += new System.EventHandler(this.clientWin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -247,10 +235,7 @@
         private System.Windows.Forms.ToolStripMenuItem заказыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem платежиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отччетToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem статистикаToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripMenuItem моиДанныеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сменитьПарольToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem нашиУслугиToolStripMenuItem;
         private System.Windows.Forms.TextBox sidBox;
         private System.Windows.Forms.TextBox commBox;
@@ -258,5 +243,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button create;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label spravka;
     }
 }

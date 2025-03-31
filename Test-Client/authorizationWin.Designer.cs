@@ -1,6 +1,6 @@
 ﻿namespace Test
 {
-    partial class authorization
+    partial class authorizationWin
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(authorization));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(authorizationWin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.shovpbtn = new System.Windows.Forms.CheckBox();
             this.autorizating = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.loginBox = new System.Windows.Forms.TextBox();
-            this.shovpbtn = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,13 +50,25 @@
             this.groupBox1.Controls.Add(this.loginBox);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(101, 55);
+            this.groupBox1.Location = new System.Drawing.Point(43, 31);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(404, 424);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Войдите в аккаунт:";
+            // 
+            // shovpbtn
+            // 
+            this.shovpbtn.AutoSize = true;
+            this.shovpbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.shovpbtn.Location = new System.Drawing.Point(86, 261);
+            this.shovpbtn.Name = "shovpbtn";
+            this.shovpbtn.Size = new System.Drawing.Size(164, 25);
+            this.shovpbtn.TabIndex = 4;
+            this.shovpbtn.Text = "Показать пароль";
+            this.shovpbtn.UseVisualStyleBackColor = true;
+            this.shovpbtn.CheckedChanged += new System.EventHandler(this.shovpbtn_CheckedChanged);
             // 
             // autorizating
             // 
@@ -109,30 +121,19 @@
             this.loginBox.TabIndex = 1;
             this.loginBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginBox_KeyDown);
             // 
-            // shovpbtn
-            // 
-            this.shovpbtn.AutoSize = true;
-            this.shovpbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.shovpbtn.Location = new System.Drawing.Point(86, 261);
-            this.shovpbtn.Name = "shovpbtn";
-            this.shovpbtn.Size = new System.Drawing.Size(164, 25);
-            this.shovpbtn.TabIndex = 4;
-            this.shovpbtn.Text = "Показать пароль";
-            this.shovpbtn.UseVisualStyleBackColor = true;
-            this.shovpbtn.CheckedChanged += new System.EventHandler(this.shovpbtn_CheckedChanged);
-            // 
-            // authorization
+            // authorizationWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 533);
+            this.ClientSize = new System.Drawing.Size(498, 488);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "authorization";
+            this.Name = "authorizationWin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Вход";
+            this.Text = "Ashy Horizon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AutorWin_FormClosing);
+            this.Load += new System.EventHandler(this.authorizationWin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

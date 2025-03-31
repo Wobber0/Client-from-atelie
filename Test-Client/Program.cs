@@ -18,7 +18,7 @@ namespace Test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new authorization());
+            Application.Run(new authorizationWin());
         }
     }
     static class usersID
