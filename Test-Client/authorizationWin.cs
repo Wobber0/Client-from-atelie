@@ -154,9 +154,16 @@ namespace Test
             }
         }
 
-        private void authorizationWin_Load(object sender, EventArgs e)
-        {
 
+        private void regBut_Click(object sender, EventArgs e)
+        {// Закрываем текущую форму и открываем авторизацию
+            this.Hide();
+            registrWin reg = new registrWin();
+            DialogResult result = reg.ShowDialog();
+            if (result == DialogResult.Yes)
+            {
+                this.Show();
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(authorizationWin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.regBut = new System.Windows.Forms.Button();
             this.shovpbtn = new System.Windows.Forms.CheckBox();
             this.autorizating = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SandyBrown;
+            this.groupBox1.Controls.Add(this.regBut);
             this.groupBox1.Controls.Add(this.shovpbtn);
             this.groupBox1.Controls.Add(this.autorizating);
             this.groupBox1.Controls.Add(this.label2);
@@ -58,11 +60,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Войдите в аккаунт:";
             // 
+            // regBut
+            // 
+            this.regBut.BackColor = System.Drawing.Color.Bisque;
+            this.regBut.FlatAppearance.BorderSize = 0;
+            this.regBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regBut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.regBut.Location = new System.Drawing.Point(63, 336);
+            this.regBut.Name = "regBut";
+            this.regBut.Size = new System.Drawing.Size(261, 43);
+            this.regBut.TabIndex = 5;
+            this.regBut.Text = "Зарегестрироваться";
+            this.regBut.UseVisualStyleBackColor = false;
+            this.regBut.Click += new System.EventHandler(this.regBut_Click);
+            // 
             // shovpbtn
             // 
             this.shovpbtn.AutoSize = true;
             this.shovpbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.shovpbtn.Location = new System.Drawing.Point(86, 261);
+            this.shovpbtn.Location = new System.Drawing.Point(87, 229);
             this.shovpbtn.Name = "shovpbtn";
             this.shovpbtn.Size = new System.Drawing.Size(164, 25);
             this.shovpbtn.TabIndex = 4;
@@ -76,9 +92,9 @@
             this.autorizating.FlatAppearance.BorderSize = 0;
             this.autorizating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.autorizating.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.autorizating.Location = new System.Drawing.Point(107, 313);
+            this.autorizating.Location = new System.Drawing.Point(129, 271);
             this.autorizating.Name = "autorizating";
-            this.autorizating.Size = new System.Drawing.Size(161, 59);
+            this.autorizating.Size = new System.Drawing.Size(122, 43);
             this.autorizating.TabIndex = 3;
             this.autorizating.Text = "Войти";
             this.autorizating.UseVisualStyleBackColor = false;
@@ -88,7 +104,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(82, 195);
+            this.label2.Location = new System.Drawing.Point(83, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 3;
@@ -98,7 +114,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(82, 88);
+            this.label1.Location = new System.Drawing.Point(83, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 24);
             this.label1.TabIndex = 2;
@@ -106,7 +122,7 @@
             // 
             // passwordBox
             // 
-            this.passwordBox.Location = new System.Drawing.Point(86, 221);
+            this.passwordBox.Location = new System.Drawing.Point(87, 189);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(212, 33);
             this.passwordBox.TabIndex = 2;
@@ -115,7 +131,7 @@
             // 
             // loginBox
             // 
-            this.loginBox.Location = new System.Drawing.Point(86, 114);
+            this.loginBox.Location = new System.Drawing.Point(87, 82);
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(212, 33);
             this.loginBox.TabIndex = 1;
@@ -133,7 +149,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ashy Horizon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AutorWin_FormClosing);
-            this.Load += new System.EventHandler(this.authorizationWin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -149,6 +164,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.TextBox loginBox;
+        private System.Windows.Forms.Button regBut;
     }
 }
 
