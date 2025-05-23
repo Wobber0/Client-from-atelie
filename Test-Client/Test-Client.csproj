@@ -116,6 +116,12 @@
     <Compile Include="confexitWin.Designer.cs">
       <DependentUpon>confexitWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="myInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myInfo.Designer.cs">
+      <DependentUpon>myInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrWin.cs">
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="confexitWin.resx">
       <DependentUpon>confexitWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myInfo.resx">
+      <DependentUpon>myInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

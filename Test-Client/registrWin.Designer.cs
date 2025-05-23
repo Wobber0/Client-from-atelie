@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registrWin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.FIBox = new System.Windows.Forms.TextBox();
             this.RegBut = new System.Windows.Forms.Button();
-            this.addressBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,14 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Регистрация:";
+            // 
+            // addressBox
+            // 
+            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addressBox.Location = new System.Drawing.Point(58, 201);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(283, 31);
+            this.addressBox.TabIndex = 17;
             // 
             // passwordBox
             // 
@@ -100,7 +108,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(53, 172);
+            this.label6.Location = new System.Drawing.Point(53, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 21);
             this.label6.TabIndex = 13;
@@ -163,14 +171,6 @@
             this.RegBut.Text = "Зарегестрироваться";
             this.RegBut.UseVisualStyleBackColor = false;
             this.RegBut.Click += new System.EventHandler(this.RegBut_Click);
-            // 
-            // addressBox
-            // 
-            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addressBox.Location = new System.Drawing.Point(58, 196);
-            this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(283, 31);
-            this.addressBox.TabIndex = 17;
             // 
             // registrWin
             // 

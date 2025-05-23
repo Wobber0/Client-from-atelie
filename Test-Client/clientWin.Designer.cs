@@ -35,6 +35,7 @@
             this.заказыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.платежиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отччетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.моиМеркиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.нашиУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sidBox = new System.Windows.Forms.TextBox();
@@ -53,6 +54,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.SandyBrown;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.моиМеркиToolStripMenuItem,
             this.выходToolStripMenuItem,
             this.бДToolStripMenuItem,
             this.отччетToolStripMenuItem,
@@ -80,8 +82,8 @@
             this.платежиToolStripMenuItem});
             this.бДToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.бДToolStripMenuItem.Name = "бДToolStripMenuItem";
-            this.бДToolStripMenuItem.Size = new System.Drawing.Size(145, 28);
-            this.бДToolStripMenuItem.Text = "Мои заказы";
+            this.бДToolStripMenuItem.Size = new System.Drawing.Size(96, 28);
+            this.бДToolStripMenuItem.Text = "Заказы";
             // 
             // заказыToolStripMenuItem
             // 
@@ -101,16 +103,24 @@
             // 
             this.отччетToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.отччетToolStripMenuItem.Name = "отччетToolStripMenuItem";
-            this.отччетToolStripMenuItem.Size = new System.Drawing.Size(164, 28);
-            this.отччетToolStripMenuItem.Text = "Мои платежи";
+            this.отччетToolStripMenuItem.Size = new System.Drawing.Size(113, 28);
+            this.отччетToolStripMenuItem.Text = "Платежи";
             this.отччетToolStripMenuItem.Click += new System.EventHandler(this.отччетToolStripMenuItem_Click);
+            // 
+            // моиМеркиToolStripMenuItem
+            // 
+            this.моиМеркиToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.моиМеркиToolStripMenuItem.Name = "моиМеркиToolStripMenuItem";
+            this.моиМеркиToolStripMenuItem.Size = new System.Drawing.Size(155, 28);
+            this.моиМеркиToolStripMenuItem.Text = "Мои данные";
+            this.моиМеркиToolStripMenuItem.Click += new System.EventHandler(this.моиМеркиToolStripMenuItem_Click);
             // 
             // нашиУслугиToolStripMenuItem
             // 
             this.нашиУслугиToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.нашиУслугиToolStripMenuItem.Name = "нашиУслугиToolStripMenuItem";
-            this.нашиУслугиToolStripMenuItem.Size = new System.Drawing.Size(158, 28);
-            this.нашиУслугиToolStripMenuItem.Text = "Наши услуги";
+            this.нашиУслугиToolStripMenuItem.Size = new System.Drawing.Size(94, 28);
+            this.нашиУслугиToolStripMenuItem.Text = "Услуги";
             this.нашиУслугиToolStripMenuItem.Click += new System.EventHandler(this.нашиУслугиToolStripMenuItem_Click);
             // 
             // dataGridView1
@@ -216,7 +226,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ashy Horizon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.clientWin_FormClosing);
-            this.Load += new System.EventHandler(this.clientWin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -244,5 +253,6 @@
         private System.Windows.Forms.Button create;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label spravka;
+        private System.Windows.Forms.ToolStripMenuItem моиМеркиToolStripMenuItem;
     }
 }

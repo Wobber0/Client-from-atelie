@@ -70,7 +70,7 @@
             this.regBut.Name = "regBut";
             this.regBut.Size = new System.Drawing.Size(261, 43);
             this.regBut.TabIndex = 5;
-            this.regBut.Text = "Зарегестрироваться";
+            this.regBut.Text = "Зарегистрироваться";
             this.regBut.UseVisualStyleBackColor = false;
             this.regBut.Click += new System.EventHandler(this.regBut_Click);
             // 

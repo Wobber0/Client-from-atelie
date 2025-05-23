@@ -176,9 +176,10 @@ namespace Test_Client
             }
         }
 
-        private void clientWin_Load(object sender, EventArgs e)
+        private void моиМеркиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            myInfo info = new myInfo();
+            info.ShowDialog();
         }
     }
 }
