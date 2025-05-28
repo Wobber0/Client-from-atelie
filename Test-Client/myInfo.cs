@@ -45,6 +45,28 @@ namespace Test_Client
             {
                 first_try = true;
             }
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connStr);
+                connection.Open();
+                string query = $"SELECT * FROM client WHERE id = {usersID.Value};";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                //добавление вариантов для бокса с логинами
+                while (reader.Read())
+                {
+                    FIBox.Text = reader["name"].ToString();
+                    numberBox.Text = reader["phone"].ToString();
+                    addressBox.Text = reader["address"].ToString();
+                    loginBox.Text = reader["login"].ToString();
+                    passwordBox.Text = reader["password"].ToString();
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Save_Click(object sender, EventArgs e)
